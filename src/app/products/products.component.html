@@ -1,0 +1,63 @@
+<!-- <ul *ngIf="ngOnInit">
+    <li *ngFor="let category of categories">
+      <strong>{{ category.name }}</strong> - {{ category.description }}
+    </li>
+  </ul> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HTML Table</h2>
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>SupplierId</th>
+        <th>categoryId</th>
+        <th>quantityPerUnit</th>
+        <th>unitPrice</th>
+        <th>unitsInStock</th>
+        <th>unitsOnOrder</th>
+        <th>reorderLevel</th>
+        <th>discontinued</th>
+        <th>name</th>
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.supplierId }}</td>
+        <td>{{ product.categoryId }}</td>
+        <td>{{ product.quantityPerUnit }}</td>
+        <td>{{ product.unitPrice }}</td>
+        <td>{{ product.unitsInStock }}</td>
+        <td>{{ product.unitsOnOrder }}</td>
+        <td>{{ product.reorderLevel }}</td>
+        <td>{{ product.discontinued }}</td>
+        <td>{{ product.name }}</td>
+        <td>
+          <button [routerLink]="['/products/update', product.id]">Update</button>
+        </td>
+        <td><button (click)="deleteProduct(product.id)">Delete</button></td>
+      </tr>
+    </table>
+  </body>
+</html>

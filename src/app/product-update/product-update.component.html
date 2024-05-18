@@ -1,0 +1,24 @@
+<form class="form" [formGroup]="updateForm" *ngIf="updateForm">
+  <label>
+    Name:
+    <input type="text" formControlName="name" />
+  </label>
+  <label>
+    unitPrice:
+    <input type="text" formControlName="unitPrice" />
+  </label>
+  <label>
+    QuantityPerUnit:
+    <input type="text" formControlName="QuantityPerUnit" />
+  </label>
+  <label>
+    unitsInStock:
+    <input type="text" formControlName="unitsInStock" />
+  </label>
+  <label>
+    unitsOnOrder:
+    <input type="text" formControlName="unitsOnOrder" />
+  </label>
+
+  <button type="submit" (click)="onSubmit($event)">Submit</button>
+</form>
