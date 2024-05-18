@@ -1,0 +1,37 @@
+<!-- <ul *ngIf="category">
+  <li *ngFor="let category of categories">
+    <strong>{{ category.name }}</strong> - {{ category.description }}
+  </li>
+  <li>{{ category.description }}</li>
+</ul> -->
+
+<!-- <form *ngIf="category" (ngSubmit)="onSubmit($event)">
+  <label for="fname">Name:</label><br />
+  <input type="text" id="fname" name="fname" value="{{category.name}}" /><br />
+  <label for="lname">Description:</label><br />
+  <input type="text" id="lname" name="lname" value="{{category.description}}" /><br /><br />
+  <button type="submit" value="Submit" >Update</button>
+</form> -->
+
+<!-- Favorite Color: <input type="text" [formControl]="favoriteColorControl" /> -->
+
+<!-- <form *ngIf="category">
+Name: <input type="text" formControlName="name" />
+Description: <input type="text" formControlName="description" />
+</form> -->
+<!-- <form [formGroup]="categoryForm" *ngIf="categoryForm">
+  Name: <input type="text" formControlName="name" />
+  Description: <input type="text" formControlName="description" />
+</form> -->
+
+<form [formGroup]="updateForm" *ngIf="updateForm">
+  <label>
+    Name:
+    <input type="text" formControlName="name" />
+  </label>
+  <label>
+    Description:
+    <input type="text" formControlName="description" />
+  </label>
+  <button type="submit" (click)="onSubmit($event)">Submit</button>
+</form>
