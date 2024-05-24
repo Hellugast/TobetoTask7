@@ -4,6 +4,8 @@ import { CategoryUpdateComponent } from './category-update/category-update.compo
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { PipeExamplesComponent } from './pipe-examples/pipe-examples.component';
+import { DirectiveExamplesComponent } from './directive-examples/directive-examples.component';
 
 export const routes: Routes = [
 
@@ -27,5 +29,15 @@ export const routes: Routes = [
         path: 'products/update/:id',
         component: ProductUpdateComponent,
         title: 'Product details'
+    },
+    {
+        path: 'pipes',
+        component: PipeExamplesComponent,
+        title: 'Pipe examples'
+    },
+    {
+        path: 'directives',
+        component: DirectiveExamplesComponent,
+        title: 'Directive examples'
     }
 ];

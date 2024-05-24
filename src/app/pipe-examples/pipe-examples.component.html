@@ -1,0 +1,32 @@
+<div>
+  <h1>Angular Built-in Pipes Örnekleri</h1>
+
+  <!-- UpperCase Pipe -->
+  <p>UpperCase Pipe: {{ "koca yaşlı, şişko dünya" | uppercase }}</p>
+
+  <!-- LowerCase Pipe -->
+  <p>LowerCase Pipe: {{ "MERHABA DÜNYA" | lowercase }}</p>
+
+  <!-- Date Pipe -->
+  <p>Date Pipe: {{ currentDate | date : "fullDate" }}</p>
+
+  <!-- Currency Pipe -->
+  <p>Currency Pipe: {{ amount | currency : "TRY" }}</p>
+
+  <!-- Percent Pipe -->
+  <p>Percent Pipe: {{ percentage | percent }}</p>
+</div>
+<br>
+<h1>Translate Örnekleri</h1>
+<hr />
+
+<h1>{{ "HOME.TITLE" }}</h1>
+
+<h1>{{ "HOME.TITLE" | translate }}</h1>
+
+<p>{{ "HOME.PARAGRAPH" | translate }}</p>
+
+<button (click)="switchLanguage('en')">English</button>
+<button (click)="switchLanguage('tr')">Türkçe</button>
+
+<h1>Dil:{{ currentLang }}</h1>
